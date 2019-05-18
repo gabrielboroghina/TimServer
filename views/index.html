@@ -24,7 +24,7 @@
             <section>
                 <p id="speedVal"></p>
                 <label for="spdRange" id="engine">Engine</label>
-                <input type="range" min="-100" max="100" value="0" class="slider" orient="vertical" id="spdRange">
+                <input type="range" min="-100" max="100" step = "5" value="0" class="slider" orient="vertical" id="spdRange">
                 <br>
                 <button class="button" type="button" onclick="stop()">STOP</button>
 
@@ -35,7 +35,7 @@
             <section>
                 <p id="dirVal"></p>
                 <label for="dirRange" id="dir">Direction</label>
-                <input type="range" min="-100" max="100" value="0" class="slider" id="dirRange">
+                <input type="range" min="-100" max="100" step = "5" value="0" class="slider" id="dirRange">
                 <br>
                 <button class="button" type="button" onclick="resetDir()">STRAIGHT</button>
             </section>

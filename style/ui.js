@@ -1,7 +1,7 @@
-let speedSlider = document.getElementById("spdRange");
-let dirSlider = document.getElementById("dirRange");
-let speedText = document.getElementById("speedVal");
-let dirText = document.getElementById("dirVal");
+const speedSlider = document.getElementById("spdRange");
+const dirSlider = document.getElementById("dirRange");
+const speedText = document.getElementById("speedVal");
+const dirText = document.getElementById("dirVal");
 
 speedText.innerHTML = speedSlider.value;
 dirText.innerHTML = dirSlider.value;
@@ -21,7 +21,7 @@ function updateServerData() {
     // send new values for speed and direction to server
     let xhttp = new XMLHttpRequest();
     xhttp.open("GET",
-        "/upd?spd=" + speedSlider.value + "&dir=" + dirSlider.value,
+        "/upd?spd=" + speedSlider.value + "&trj=" + dirSlider.value,
         true);
     xhttp.send();
 }

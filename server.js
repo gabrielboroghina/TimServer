@@ -13,18 +13,18 @@ app.use(morgan('combined'));
 const port = process.env.PORT || process.env.OPENSHIFT_NODEJS_PORT || 8080;
 const ip = process.env.IP || process.env.OPENSHIFT_NODEJS_IP || '0.0.0.0';
 
-let speed = 0, dir = 0;
+let speed = 0, direction = 0;
 
 // GET callbacks
 
 app.get('/upd', function (req, res) {
     // update values
     speed = req.query.spd;
-    dir = req.query.dir;
+    direction = req.query.trj;
 });
 
 app.get('/get', function (req, res) {
-    res.send('SPEED=' + speed + " DIR=" + dir);
+    res.send('SPEED=' + speed + " DIR=" + direction);
 });
 
 app.get('/', function (req, res) {
