@@ -26,7 +26,7 @@ app.post('/upd', function (req, res) {
 });
 
 app.get('/get', function (req, res) {
-    res.send('SPEED=' + speed + " DIR=" + direction);
+    res.send('***' + speed + ";" + direction);
 });
 
 app.get('/', function (req, res) {
