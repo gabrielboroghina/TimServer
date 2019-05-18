@@ -8,19 +8,19 @@ dirText.innerHTML = dirSlider.value;
 
 
 speedSlider.oninput = function () {
-    speedText.innerHTML = this.value;
     updateServerData();
+    speedText.innerHTML = this.value;
 };
 
 dirSlider.oninput = function () {
-    dirText.innerText = this.value;
     updateServerData();
+    dirText.innerText = this.value;
 };
 
 function updateServerData() {
     // send new values for speed and direction to server
     let xhttp = new XMLHttpRequest();
-    xhttp.open("GET",
+    xhttp.open("POST",
         "/upd?spd=" + speedSlider.value + "&trj=" + dirSlider.value,
         true);
     xhttp.send();

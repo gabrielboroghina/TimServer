@@ -17,10 +17,12 @@ let speed = 0, direction = 0;
 
 // GET callbacks
 
-app.get('/upd', function (req, res) {
+app.post('/upd', function (req, res) {
     // update values
     speed = req.query.spd;
     direction = req.query.trj;
+    console.log("Received val = " + req.query.spd);
+    res.send('');
 });
 
 app.get('/get', function (req, res) {
